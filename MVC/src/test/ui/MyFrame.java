@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 
 public class MyFrame extends JFrame {
 
-	private MyPanel panel;
+	private final MyPanel panel;
 
 	public MyFrame(String title) {
 		super(title);

@@ -6,9 +6,9 @@ import javax.swing.JPanel;
 
 public class MyPanel extends JPanel{
 
-	private JButton calcBtn;
-	private MyTextField num1Field, num2Field, resultField;
-	private MyLabel plusLabel, errLable;
+	private final JButton calcBtn;
+	private final MyTextField num1Field, num2Field, resultField;
+	private final MyLabel errLable;
 
 	public MyPanel() {
 
@@ -23,7 +23,7 @@ public class MyPanel extends JPanel{
 		num2Field = new MyTextField(false, true);
 		resultField = new MyTextField(true, false);
 
-		plusLabel = new MyLabel(28,"+", false, true, 20);
+		MyLabel plusLabel = new MyLabel(28, "+", false, true, 20);
 		errLable = new MyLabel(22,"",true,false, 400);
 
 		add(num1Field);

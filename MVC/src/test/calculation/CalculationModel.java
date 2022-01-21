@@ -2,7 +2,7 @@ package test.calculation;
 
 public class CalculationModel {
 
-	private Number result;
+	private final Number result;
 
 	public CalculationModel(int firstNumber, int secondNumber){
 		result = firstNumber + secondNumber;

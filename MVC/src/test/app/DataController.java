@@ -2,14 +2,13 @@ package test.app;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import test.calculation.CalculationModel;
 import test.ui.MyFrame;
 
 public class DataController implements ActionListener{
 
 	private CalculationModel model;
-	private MyFrame myFrame;
+	private final MyFrame myFrame;
 
 	public DataController(MyFrame myFrame) {
 		super();

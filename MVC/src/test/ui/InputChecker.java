@@ -9,9 +9,9 @@ import javax.swing.JTextField;
 
 public class InputChecker implements KeyListener{
 
-	private JTextField field1, field2, field3;
-	private JButton calcBtn;
-	private JLabel errLable;
+	private final JTextField field1, field2, field3;
+	private final JButton calcBtn;
+	private final JLabel errLable;
 
 	public InputChecker(MyPanel myPanel) {
 		this.field1 = myPanel.getNum1Field();
