@@ -2,7 +2,6 @@ package com.ojail;
 
 import com.ojail.model.Product;
 import com.ojail.model.ProductsManager;
-import com.ojail.model.Strategies;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,4 +21,7 @@ public class Main {
         productsManager.sortProducts(Strategies.qty.toString());
         productsManager.printProductsList();
     }
+}
+enum Strategies {
+    name, price,qty
 }

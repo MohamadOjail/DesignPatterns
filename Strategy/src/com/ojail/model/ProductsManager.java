@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-
 public class ProductsManager{
 
-    private List<Product> products = new ArrayList<>();
+    private final List<Product> products = new ArrayList<>();
     private String sortStrategy;
 
     public void addProduct(Product product){
