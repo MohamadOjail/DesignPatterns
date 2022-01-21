@@ -2,7 +2,7 @@
 ## Project:
 > A quick study for the MVC pattern, the project is a simple app that sums two number regardless of theeir type either if they're both of type `Integer` / `Double` or even `a mix of Double and Integer`.
 ## Preview:
-![](/img/preview.gif)
+![](img/preview.gif)
 
 # MVC:
 | Model  | View  | Controller  |
