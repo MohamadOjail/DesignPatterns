@@ -33,6 +33,7 @@ private Controller controller;
 ```
 
 ### Firing the event from the FXML Controller:
+
 ```java
 public void setTemp (String temperature){
         this.myLabel.setText(temperature + "°");
@@ -48,5 +49,7 @@ public void setTemp (String temperature){
         TemperatureSensor.getInstance().addListener(hub);
     }
 ```
+
 ### Important note:
+
 > the app uses google fonts in it's css stylesheet, it would be recommended that your device is connected to the internet while testing the code.

@@ -13,7 +13,6 @@ public class SensorHub implements PropertyChangeListener {
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-
         this.controller.setTemp(evt.getNewValue().toString());
     }
 }
