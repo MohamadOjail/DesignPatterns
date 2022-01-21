@@ -1,6 +1,5 @@
 package test.app;
-
-import test.ui.InputChecker;
+ import test.ui.InputChecker;
 import test.ui.MyFrame;
 
 public class Main {
