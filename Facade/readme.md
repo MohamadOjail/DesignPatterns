@@ -4,4 +4,4 @@
 
 ### Preview:
 
-![]("/img/img.png")
+![](img/img.png)
