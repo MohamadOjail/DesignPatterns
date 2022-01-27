@@ -5,12 +5,11 @@ import javax.swing.*;
 public class MyPanel extends JPanel {
 
     private final MyTextField uncensoredField, censoredField;
-    private final MyLabel infoNoProxy, warning, infoWithProxy;
-    private final MyButton button;
+    private final MyLabel warning;
 
     public MyPanel() {
 
-        infoNoProxy = new MyLabel("Randomised name & adjective uncensored", true, false);
+        MyLabel infoNoProxy = new MyLabel("Randomised name & adjective uncensored", true, false);
         infoNoProxy.setLocation(25,10);
 
         uncensoredField = new MyTextField();
@@ -19,7 +18,7 @@ public class MyPanel extends JPanel {
         warning = new MyLabel("Contains unwanted words", false, true);
         warning.setLocation(25, 85);
 
-        infoWithProxy = new MyLabel("Randomised name & adjective censored (Proxy)", true, false);
+        MyLabel infoWithProxy = new MyLabel("Randomised name & adjective censored (Proxy)", true, false);
         infoWithProxy.setLocation(25, 125);
 
         censoredField = new MyTextField();
@@ -28,7 +27,7 @@ public class MyPanel extends JPanel {
         Controller controller = new Controller();
         controller.injectPanel(this);
 
-        button = new MyButton(controller);
+        MyButton button = new MyButton(controller);
         button.setLocation(20, 230);
 
         setLayout(null);
@@ -51,19 +50,8 @@ public class MyPanel extends JPanel {
         return censoredField;
     }
 
-    public MyLabel getInfoNoProxy() {
-        return infoNoProxy;
-    }
-
     public MyLabel getWarning() {
         return warning;
     }
 
-    public MyLabel getInfoWithProxy() {
-        return infoWithProxy;
-    }
-
-    public MyButton getButton() {
-        return button;
-    }
 }

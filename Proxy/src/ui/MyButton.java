@@ -7,8 +7,6 @@ import java.awt.event.MouseEvent;
 
 public class MyButton extends JButton {
 
-    private final Controller controller;
-
     public MyButton(Controller controller) {
         setText("Randomize!");
         setIcon(new ImageIcon("src/ui/icon.png"));
@@ -24,8 +22,6 @@ public class MyButton extends JButton {
 
         setForeground(Color.white);
         setBackground(new Color(30, 46, 189));
-
-        this.controller = controller;
 
         addMouseListener(new MouseAdapter() {
             @Override
