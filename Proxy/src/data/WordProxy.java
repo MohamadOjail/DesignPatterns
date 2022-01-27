@@ -2,27 +2,23 @@ package data;
 
 import io.FileSource;
 import io.Reader;
-import java.util.Random;
 
 import static java.util.Arrays.*;
 
 public class WordProxy {
 
-    private final Random rnd = new Random();
     private final Reader reader = new Reader();
+    private final Builder builder = new Builder();
     private final String[] badWords = reader.getWords(FileSource.BAD);
-    private final String[] adjs = reader.getWords(FileSource.ADJECTIVES);
 
-    public String getRandomAdj(){
+    public String buildStringProxy(){
 
-        String output = adjs[rnd.nextInt(adjs.length)];
-        while (isUnwanted(output)){
-            output = adjs[rnd.nextInt(adjs.length)];
-        }
+        String output = builder.buildString();
+        while (containsUnwanted(output)) output = builder.buildString();
         return output;
     }
 
-    public boolean isUnwanted(String adj){
-        return stream(badWords).anyMatch(bad -> bad.equalsIgnoreCase(adj));
+    public boolean containsUnwanted(String sentence){
+        return stream(badWords).anyMatch(bad -> bad.equalsIgnoreCase(sentence.split(" ")[2]));
     }
 }

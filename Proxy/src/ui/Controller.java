@@ -15,7 +15,7 @@ public class Controller {
 
     public void setText(){
         panel.getUncensoredField().setText(builder.buildString());
-        panel.getCensoredField().setText(builder.buildStringProxy());
-        panel.getWarning().setVisible(wordProxy.isUnwanted(panel.getUncensoredField().getText().split(" ")[2]));
+        panel.getCensoredField().setText(wordProxy.buildStringProxy());
+        panel.getWarning().setVisible(wordProxy.containsUnwanted(panel.getUncensoredField().getText().split(" ")[2]));
     }
 }
