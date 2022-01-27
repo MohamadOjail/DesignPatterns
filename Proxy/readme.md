@@ -13,3 +13,7 @@ All the GUI components are customized this implicates that the application also 
 ### Preview:
 
 ![](img/preview.gif)
+
+
+## Diagram
+![](img/Proxy.png)
